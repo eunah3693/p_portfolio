@@ -1,0 +1,664 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/*font-family: 'Noto Sans', sans-serif;
+font-family: 'Noto Sans KR', sans-serif;
+font-family: 'Noto Serif', serif;*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #100f39;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.intro-page {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.main_wrap {
+  width: 900%;
+  height: 100%;
+  display: flex;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+section {
+  width: 100%;
+  height: 100%;
+  background-color: #fefefe;
+  display: flex;
+}
+
+.home_wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.main_bg {
+  width: calc(100% - 30px);
+  height: 100%;
+  position: relative;
+  background: url(/assets/main_bg.png) no-repeat center/100% 100%;
+  background-size: cover;
+}
+
+.main_tree {
+  width: 100%;
+  height: 506px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: url(/assets/main_tree.png) no-repeat bottom/100% auto;
+  z-index: 2;
+}
+
+.main_star1,
+.main_star2,
+.main_star3 {
+  width: 100%;
+  height: 200%;
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  background: url(/assets/main_star.png) center/100% 50%;
+  animation: rotate 50s ease-in-out infinite;
+  z-index: 1;
+}
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.title {
+  width: 30px;
+  height: 100%;
+  background-color: #2b2b2b;
+  color: #fff;
+  z-index: 10;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.title h1 {
+  transform: rotate(90deg) translateX(20px);
+  font-weight: 400;
+  font-size: 20px;
+}
+
+/***프로필**********************************************************/
+.profile_wrap {
+  position: relative;
+  z-index: 100;
+  left: -240px;
+}
+
+.wrap {
+  width: calc(100% - 240px);
+  height: 100%;
+  border-bottom: 17px solid #000000;
+  border-top: 17px solid #000000;
+}
+
+.top {
+  display: flex;
+  height: 15%;
+  border-bottom: 3px solid #dcdad7;
+}
+
+.content {
+  display: flex;
+  height: 65%;
+  border-bottom: 3px solid #dcdad7;
+}
+
+.bottom {
+  display: flex;
+  height: 20%;
+}
+
+.top_left {
+  width: 25%;
+  border-right: 5px solid #dcdad7;
+  display: flex;
+  align-items: center;
+  padding-left: 5%;
+  letter-spacing: 1px;
+}
+
+.top_left h2 {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 1.5rem;
+  color: #100f39;
+}
+
+.top_right {
+  width: 75%;
+}
+
+.content_left {
+  width: 25%;
+  background-color: #e5e5e5;
+  border-right: 5px solid #dcdad7;
+  position: relative;
+}
+
+.photo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+}
+
+.photo_bg {
+  background-color: #5a595e;
+  position: absolute;
+  left: 53%;
+  top: 53%;
+  transform: translate(-50%, -50%);
+}
+
+.photo.num1 {
+  width: 15vw;
+  height: 40vh;
+  background: url(/assets/profile.png) no-repeat center/100% 100%;
+}
+
+.photo_bg.num1 {
+  width: 15vw;
+  height: 40vh;
+}
+
+.content_right {
+  width: 75%;
+}
+
+.content_title {
+  width: 100%;
+  height: 25%;
+  border-bottom: 5px solid #dcdad7;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+  padding-left: 5%;
+}
+
+.content_title span {
+  display: block;
+  width: 100%;
+  color: #fab140;
+  font-size: 1.3rem;
+}
+
+.content_title h3 {
+  font-size: 2rem;
+  width: 100%;
+  color: #100f39;
+}
+
+.content_area {
+  width: 100%;
+  height: 75%;
+  display: flex;
+  align-items: center;
+  padding-left: 5%;
+}
+
+.content_area p {
+  display: block;
+  width: 70%;
+  color: #6b6d6a;
+  font-size: 1.5rem;
+  line-height: 4.5vh;
+  letter-spacing: -2px;
+}
+
+.bottom_left {
+  width: 25%;
+  border-right: 5px solid #dcdad7;
+}
+
+.bottom_left p {
+  display: none;
+}
+
+.work_bottom_left p {
+  display: none;
+}
+
+.bottom_right {
+  width: 75%;
+  background-color: #e5e5e5;
+}
+
+/***에듀**********************************************************/
+.education_wrap {
+  position: relative;
+  z-index: 1000;
+  left: -210px;
+  transform: translateX(-100%);
+}
+
+.photo.num2 {
+  width: 15vw;
+  height: 40vh;
+  background: url(/assets/profile2.png) no-repeat center/100% 100%;
+}
+
+.photo_bg.num2 {
+  width: 15vw;
+  height: 40vh;
+}
+
+/***경력**********************************************************/
+.career_wrap {
+  position: relative;
+  z-index: 10000;
+  left: -180px;
+  transform: translateX(-200%);
+}
+
+.photo.num3 {
+  width: 20vw;
+  height: 40vh;
+  background: url(/assets/career.png) no-repeat center/100% 100%;
+}
+
+/***작업**********************************************************/
+.work_wrap.wrap1 {
+  position: relative;
+  z-index: 100000;
+  left: -150px;
+  transform: translateX(-300%);
+}
+
+.photo.num4 {
+  width: 40vw;
+  height: 45vh;
+  background: url(/assets/mega.png) no-repeat center/100% 100%;
+  cursor: pointer;
+}
+
+.work_top_left {
+  width: 60%;
+  border-right: 5px solid #dcdad7;
+  display: flex;
+  align-items: center;
+  padding-left: 5%;
+  letter-spacing: 1px;
+}
+
+.work_top_left h2 {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 2.2rem;
+  color: #100f39;
+}
+
+.work_top_right {
+  width: 40%;
+}
+
+.work_content_left {
+  width: 60%;
+  background-color: #e5e5e5;
+  border-right: 5px solid #dcdad7;
+  position: relative;
+}
+
+.work_content_right {
+  width: 40%;
+}
+
+.work_content_right p {
+  display: block;
+  width: 50%;
+  color: #6b6d6a;
+  font-size: 1.3rem;
+  line-height: 2;
+  letter-spacing: -2px;
+}
+
+.work_bottom_left {
+  width: 60%;
+  border-right: 5px solid #dcdad7;
+}
+
+.work_bottom_right {
+  width: 40%;
+  background-color: #e5e5e5;
+}
+
+.po1 {
+  font-weight: 600;
+  cursor: pointer;
+  color: #100f39;
+}
+
+.po2 {
+  font-weight: 600;
+  cursor: pointer;
+  color: #100f39;
+}
+
+/***작업2**********************************************************/
+.work_wrap.wrap2 {
+  position: relative;
+  z-index: 100000;
+  left: -120px;
+  transform: translateX(-400%);
+}
+
+.photo.num5 {
+  width: 40vw;
+  height: 45vh;
+  background: url(/assets/starbucks.png) no-repeat center/100% 100%;
+  cursor: pointer;
+}
+
+/***작업3**********************************************************/
+.work_wrap.wrap3 {
+  position: relative;
+  z-index: 100000;
+  left: -90px;
+  transform: translateX(-500%);
+}
+
+/***작업4**********************************************************/
+.work_wrap.wrap4 {
+  position: relative;
+  z-index: 100000;
+  left: -60px;
+  transform: translateX(-600%);
+}
+
+/***컨택트**********************************************************/
+.contact_wrap {
+  position: relative;
+  z-index: 1000000;
+  left: -30px;
+  transform: translateX(-700%);
+}
+
+.contact_wrap .wrap {
+  width: calc(100% - 270px);
+}
+
+.wrap .bg {
+  width: 100%;
+  height: 100%;
+  background-color: #e5e5e5;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  color: #5a595e;
+}
+
+.bg h4 {
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  padding-bottom: 5%;
+}
+
+.bg p {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+/* 반응형 미디어쿼리 */
+@media all and (max-width: 1200px) {
+  html,
+  body {
+    font-size: 15px;
+  }
+}
+
+@media all and (max-width: 1000px) {
+  html,
+  body {
+    font-size: 13px;
+  }
+}
+
+@media all and (max-width: 900px) {
+  html,
+  body {
+    font-size: 12px;
+  }
+
+  .work_top_left {
+    width: 50%;
+  }
+
+  .work_top_right {
+    width: 50%;
+  }
+
+  .work_content_right {
+    width: 50%;
+  }
+
+  .work_content_left {
+    width: 50%;
+  }
+
+  .work_bottom_left {
+    width: 50%;
+  }
+
+  .work_bottom_right {
+    width: 50%;
+  }
+}
+
+@media all and (max-width: 800px) {
+  html,
+  body {
+    font-size: 11px;
+  }
+
+  .content_area p {
+    width: 40vw;
+  }
+
+  .work_content_right .content_area p {
+    width: 15vw;
+  }
+
+  .content {
+    height: 70%;
+  }
+
+  .bottom {
+    height: 15%;
+  }
+}
+
+@media all and (max-width: 700px) {
+  html,
+  body {
+    font-size: 10px;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .sec1,
+  .profile_wrap,
+  .education_wrap,
+  .career_wrap,
+  .work_wrap.wrap1,
+  .work_wrap.wrap2,
+  .work_wrap.wrap3,
+  .work_wrap.wrap4,
+  .contact_wrap {
+    left: 0;
+  }
+
+  .education_wrap,
+  .career_wrap,
+  .work_wrap.wrap1,
+  .work_wrap.wrap2,
+  .work_wrap.wrap3,
+  .work_wrap.wrap4,
+  .contact_wrap {
+    transform: translateX(0%);
+  }
+
+  .sec1 {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .main_wrap {
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+    overflow-y: auto;
+  }
+
+  .main_bg {
+    background: url(/assets/main_bg.png) no-repeat center/100% 100%;
+  }
+
+  .title {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 30px;
+    background-color: #2b2b2b;
+    color: #fff;
+    z-index: 10;
+    letter-spacing: 2px;
+  }
+
+  .title h1 {
+    transform: rotate(0deg) translateX(20px) translateY(40%);
+    font-weight: 400;
+    font-size: 20px;
+    opacity: 0;
+  }
+
+  .wrap {
+    padding-left: 0;
+    padding-top: 30px;
+    border: 0;
+  }
+
+  .profile_wrap {
+    height: 120vh;
+  }
+
+  .work_top_left,
+  .top_left,
+  .content_left,
+  .work_content_left,
+  .bottom_left,
+  .work_bottom_left {
+    width: 100%;
+    border-right: 0;
+    background-color: transparent;
+  }
+
+  .work_top_right,
+  .top_right,
+  .content_right,
+  .work_content_right,
+  .bottom_right,
+  .work_bottom_right {
+    display: none;
+  }
+
+  .top {
+    width: 100%;
+    height: 10vh;
+  }
+
+  .photo.num1,
+  .photo_bg.num1 {
+    width: 30vh;
+  }
+
+  .top_left h2 {
+    font-size: 3rem;
+  }
+
+  .content {
+    height: 50vh;
+  }
+
+  .bottom {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+  }
+
+  .bottom_left,
+  .work_bottom_left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .work_bottom_left p,
+  .bottom_left p {
+    display: block;
+    max-width: 90%;
+    width: 70%;
+    color: #6b6d6a;
+    font-size: 1.5rem;
+    line-height: 4.5vh;
+    letter-spacing: -2px;
+  }
+
+  .photo.num2,
+  .photo_bg.num2 {
+    width: 30vh;
+  }
+
+  .photo.num3,
+  .photo_bg.num3 {
+    width: 30vh;
+  }
+
+  .photo.num4,
+  .photo_bg.num4 {
+    width: 50vh;
+    max-width: 90%;
+  }
+
+  .photo.num5,
+  .photo_bg.num5 {
+    width: 50vh;
+    max-width: 90%;
+  }
+
+  .contact_wrap {
+    height: 50vh;
+  }
+}
+
